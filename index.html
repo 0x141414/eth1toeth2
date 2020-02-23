@@ -14,23 +14,12 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Favicon icon data-->
-<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
 
   <!-- Custom fonts for this template -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
@@ -45,7 +34,9 @@
   <!-- Custom styles for this template -->
   <link href="css/new-age.css" rel="stylesheet">
 
-  <link href="css/prism.css.css" rel="stylesheet">
+  <link href="css/prism.css" rel="stylesheet">
+
+  <link href="css/extension.css" rel="stylesheet">
 
 </head>
 
@@ -54,6 +45,14 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
     <div class="container">
+
+        <div class="small-scene">
+          <a href="#page-top">
+            <div class="ethcard-small">
+              <div class="eth_card_static"></div>
+            </div>
+          </a>
+        </div>
       <a class="navbar-brand js-scroll-trigger" href="#page-top">ETH1toETH2</a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         Menu
@@ -89,6 +88,8 @@
             <h1 class="mb-5 title-text">ETH1toETH2 is a free to use smart contract that facilitates the conversion of Ether 1.0 to Ether 2.0 ready for use on the ETH 2.0 Beacon Chain.</h1>
             <a href="#convert" class="btn btn-outline btn-xl js-scroll-trigger">Convert</a>
             <hr>
+            <br>
+            <h2 class="mb-5 title-text" style="color:yellow">Please note: The contracts are not currently live and this service cannot be used at this time! We are waiting on Ethereum.org to update the ETH 2.0 specification to facilitate the swap to Beacon Chain. Stay Tuned!</h1>
           </div>
         </div>
       </div>
@@ -99,10 +100,12 @@
     <div class="container">
       <div class="row">
         <div class="col-md-8 mx-auto">
-          <h2 class="section-heading">Convert ETH1.0 to ETH2.0 with the contract or convert tokens via Uniswap into ETH2 in a few clicks!</h2>
-          <p class="text-muted">Token Conversions via Uniswap to ETH2 may incur some slippage or price fluctuations, you can read more about this <a href="https://uniswap.io/">here</a></p>
+          <h2 class="section-heading">Convert ETH1.0 to ETH2.0 with the contract or liquidate Ethereum tokens via Uniswap into ETH2.0 in a few clicks!</h2>
+          <p class="text-muted">Token Conversions via 🦄 Uniswap to ETH2 may incur some slippage or price fluctuations, you can read more about this <a href="https://uniswap.io/">here</a></p>
           <a href="#convert" class="btn btn-outline btn-xl js-scroll-trigger">Convert</a>
           <hr>
+          <br>
+          The smart contract isn't live as we are waiting on the ETH1 to ETH2 process to be finalised. We are currently waiting on the specification to be finalised. The site will be updated once this is available to use.
         </div>
       </div>
     </div>
@@ -114,6 +117,8 @@
         <h2>How does the contract work?</h2>
         <p class="text-muted">This tool is intended for noobs to make the process simpler to move from ETH1 to ETH2, not for people frequently making Ethereum transactions or using dApps.</p>
         <hr>
+        <br>
+        <p>The smart contract isn't live as we are waiting on the ETH1 to ETH2 process to be finalised. We are currently waiting on the specification to be finalised. The site will be updated once this is available to use.</p>
       </div>
       </div>
     </div>
@@ -125,8 +130,81 @@
         <h2>Smart Contracts</h2>
         <p class="text-muted">You can review the contracts in use here</p>
         <hr>
+        <p>Currently this is just some generic solidity code, as the ETH1 -> ETH2 specification hasn't been finalised, this is not indicative of the final smart contract.</p>
+        <br>
+        <h3 style="text-align: left">Generic Solidity code #1 (ignore):</h3>
+        <br>
+        <pre class="language-solidity" data-line>
+          <code class="language-solidity">
+          pragma solidity >=0.4.24 <0.6.0;
 
-        <pre>
+          contract ReceiverPays {
+            address owner = msg.sender;
+
+            mapping(uint256 => bool) usedNonces;
+
+            constructor() public payable {}
+
+            function claimPayment(uint256 amount, uint256 nonce, bytes memory signature) public {
+                require(!usedNonces[nonce]);
+                usedNonces[nonce] = true;
+
+                // this recreates the message that was signed on the client
+                bytes32 message = prefixed(keccak256(abi.encodePacked(msg.sender, amount, nonce, this)));
+
+                require(recoverSigner(message, signature) == owner);
+
+                msg.sender.transfer(amount);
+            }
+
+            /// destroy the contract and reclaim the leftover funds.
+            function kill() public {
+                require(msg.sender == owner);
+                selfdestruct(msg.sender);
+            }
+
+            /// signature methods.
+            function splitSignature(bytes memory sig)
+                internal
+                pure
+                returns (uint8 v, bytes32 r, bytes32 s)
+            {
+                require(sig.length == 65);
+
+                assembly {
+                    // first 32 bytes, after the length prefix.
+                    r := mload(add(sig, 32))
+                    // second 32 bytes.
+                    s := mload(add(sig, 64))
+                    // final byte (first byte of the next 32 bytes).
+                    v := byte(0, mload(add(sig, 96)))
+                }
+
+                return (v, r, s);
+            }
+
+            function recoverSigner(bytes32 message, bytes memory sig)
+                internal
+                pure
+                returns (address)
+            {
+                (uint8 v, bytes32 r, bytes32 s) = splitSignature(sig);
+
+                return ecrecover(message, v, r, s);
+            }
+
+            /// builds a prefixed hash to mimic the behavior of eth_sign.
+            function prefixed(bytes32 hash) internal pure returns (bytes32) {
+                return keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", hash));
+            }
+          }
+          </code>
+        </pre>
+
+        <br>
+        <h3 style="text-align: left">Generic Solidity code #2 (ignore):</h3>
+        <br>
+        <pre class="language-solidity" data-line>
           <code class="language-solidity">
           pragma solidity >=0.4.24 <0.6.0;
 
@@ -229,6 +307,10 @@
   <script src="js/new-age.min.js"></script>
   <script src="js/ethflip.js"></script>
   <script src="js/prism.js" data-manual></script>
+
+  <script>
+    Prism.highlightAll();
+  </script>
 
 </body>
 
