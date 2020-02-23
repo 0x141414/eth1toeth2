@@ -6,4 +6,4 @@ Disallow: /nogooglebot/
 User-agent: *
 Allow: /
 
-Sitemap: http://www.eth1toeth2.com
+Sitemap: https://www.eth1toeth2.com

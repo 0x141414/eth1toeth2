@@ -8,8 +8,10 @@
 
 
 <url>
-  <loc>https://eth1toeth2.com/</loc>
+  <loc>https://eth1toeth2.com/sitemap</loc>
   <lastmod>2020-02-23T18:20:01+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+      <priority>0.9</priority>
 </url>
 
 
