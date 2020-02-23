@@ -186,7 +186,7 @@ header.masthead .device-container .screen img {
 
 @media (min-width: 992px) {
   header.masthead {
-    height: 50vh;
+    height: 75vh;
     min-height: 775px;
     padding-top: 0;
     padding-bottom: 0;
@@ -502,6 +502,7 @@ footer ul li a:hover, footer ul li a:focus, footer ul li a:active, footer ul li 
 
 .scene
 {
+  /*padding-top:64px;*/
   width: 256px;
   height: 417px;
   perspective: 600px;
