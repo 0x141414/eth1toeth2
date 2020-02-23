@@ -1,0 +1,18 @@
+<svg width="256" height="417" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_1">
+   <polygon id="svg_2" points="127.9611 0 125.1661 9.5 125.1661 285.168 127.9611 287.958 255.9231 212.32" fill="#f48b76"/>
+   <polygon stroke="null" id="svg_3" points="127.962 0 0 212.32 127.962 287.959 127.962 154.158" fill="#f8ec66"/>
+   <polygon id="svg_4" points="127.9611 312.1866 126.3861 314.1066 126.3861 412.3056 127.9611 416.9066 255.9991 236.5866" fill="#657abd"/>
+   <polygon id="svg_5" points="127.962 416.9052 127.962 312.1852 0 236.5852" fill="#10aed3"/>
+   <polygon id="svg_6" points="127.9611 287.9577 255.9211 212.3207 127.9611 154.1587" fill="#9d68ab"/>
+   <polygon id="svg_7" points="0.0009 212.3208 127.9609 287.9578 127.9609 154.1588" fill="#51bb78"/>
+  </g>
+ </g>
+</svg>
