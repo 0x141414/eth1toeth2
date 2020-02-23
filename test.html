@@ -10,14 +10,15 @@
 
   <title>ETH1 to ETH2</title>
 
-  <link href="css/prism.css.css" rel="stylesheet">
+  <link href="css/prism.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <pre>
+  <pre class="language-solidity" data-line>
     <code class="language-solidity">
+
     pragma solidity >=0.4.24 <0.6.0;
 
     contract ReceiverPays {
@@ -80,11 +81,13 @@
           return keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", hash));
       }
     }
+    
     </code>
   </pre>
 
+  <script src="js/prism.js" data-manual></script>
 </body>
 
-<script src="js/prism.js" data-manual></script>
+
 
 </html>
