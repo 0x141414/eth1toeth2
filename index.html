@@ -333,7 +333,11 @@
   <script async src="js/prism.js" data-manual></script>
 
   <script async>
-    Prism.highlightAll();
+
+    function prismAsyncDelay() {
+      setTimeout(function(){Prism.highlightAll(); }, 500);
+    }
+    prismAsyncDelay();
   </script>
 
 </body>
